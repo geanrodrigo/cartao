@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Virtual de Gean Rodrigo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrp9mZ3rR1l9B9b6/B8V/V7l7f7w7Q7n7w7c7t7d7f7w7t7c7s7o7p7q7r7s7t7u7v7w7x7y7z707172737475767778797a7b7c7d7e7f7g7h7i7j7k7l7m7n7o7p7q7r7s7t7u7v7w7x7y7z" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            position: relative; /* Needed for absolute positioning of background */
+            overflow: hidden; /* Prevent scroll issues with background */
+        }
+
+        /* Background image container */
+        .background-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Placeholder for IT background. Replace with a real image URL if desired. */
+            background-image: url('https://placehold.co/1920x1080/2C3E50/ECF0F1?text=Tecnologia+da+Informação');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(50%) brightness(50%); /* Darken and desaturate the background image for readability */
+            z-index: -2; /* Send to back */
+        }
+
+        /* Overlay for background to ensure text readability */
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+            z-index: -1; /* Above the image, below the content */
+        }
+
+        /* Ensure content is on top and centered */
+        .card-content-wrapper {
+            position: relative;
+            z-index: 1; /* Bring content to front */
+            padding: 1rem; /* Add padding for small screens */
+            width: 100%; /* Ensure it takes full width for responsive padding */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-200">
+    <!-- Container for the background image -->
+    <div class="background-image-container"></div>
+    <!-- Dark overlay on top of the background image -->
+    <div class="background-overlay"></div>
+
+    <!-- Wrapper to ensure the card content is centered and visible -->
+    <div class="card-content-wrapper">
+        <!-- Main container for the virtual card -->
+        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full border border-gray-200 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <!-- Header section with profile image and title -->
+            <div class="text-center mb-6">
+                <!-- Profile image placeholder, now with an IT theme. Replace with a real profile image URL. -->
+                <img src="https://placehold.co/100x100/007bff/ffffff?text=IT" alt="Profile Image" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-blue-500 object-cover shadow-md">
+                <h1 class="text-3xl font-extrabold text-gray-800 tracking-tight">Gean Rodrigo</h1>
+                <p class="text-lg text-blue-600 font-semibold mt-1">Analista de Sistemas</p>
+            </div>
+
+            <!-- Contact information section with clickable links -->
+            <div class="space-y-4">
+                <!-- Phone/Whatsapp link -->
+                <a href="https://wa.me/5573999066900" target="_blank" class="flex items-center bg-green-500 text-white p-3 rounded-lg shadow-md hover:bg-green-600 transition-all duration-200 ease-in-out transform hover:-translate-y-1">
+                    <i class="fab fa-whatsapp text-2xl mr-4"></i>
+                    <span class="text-lg font-medium">73 99906.6900</span>
+                    <span class="ml-auto text-sm opacity-80">(WhatsApp)</span>
+                </a>
+
+                <!-- Telegram link (replace 'seu_usuario_telegram' with the actual username) -->
+                <a href="https://t.me/seu_usuario_telegram" target="_blank" class="flex items-center bg-blue-500 text-white p-3 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-200 ease-in-out transform hover:-translate-y-1">
+                    <i class="fab fa-telegram-plane text-2xl mr-4"></i>
+                    <span class="text-lg font-medium">Telegram</span>
+                    <span class="ml-auto text-sm opacity-80">(Clique para Contato)</span>
+                </a>
+
+                <!-- Email link (replace 'seu.email@exemplo.com' with the actual email address) -->
+                <a href="mailto:seu.email@exemplo.com" class="flex items-center bg-red-500 text-white p-3 rounded-lg shadow-md hover:bg-red-600 transition-all duration-200 ease-in-out transform hover:-translate-y-1">
+                    <i class="fas fa-envelope text-2xl mr-4"></i>
+                    <span class="text-lg font-medium">Email</span>
+                    <span class="ml-auto text-sm opacity-80">(Clique para Contato)</span>
+                </a>
+
+                <!-- Website link -->
+                <a href="https://www.grlti.com.br" target="_blank" class="flex items-center bg-purple-500 text-white p-3 rounded-lg shadow-md hover:bg-purple-600 transition-all duration-200 ease-in-out transform hover:-translate-y-1">
+                    <i class="fas fa-globe text-2xl mr-4"></i>
+                    <span class="text-lg font-medium">www.grlti.com.br</span>
+                    <span class="ml-auto text-sm opacity-80">(Website)</span>
+                </a>
+
+                <!-- LinkedIn link (replace 'seu-usuario-linkedin' with the actual LinkedIn profile URL) -->
+                <a href="https://www.linkedin.com/in/seu-usuario-linkedin" target="_blank" class="flex items-center bg-blue-700 text-white p-3 rounded-lg shadow-md hover:bg-blue-800 transition-all duration-200 ease-in-out transform hover:-translate-y-1">
+                    <i class="fab fa-linkedin text-2xl mr-4"></i>
+                    <span class="text-lg font-medium">LinkedIn</span>
+                    <span class="ml-auto text-sm opacity-80">(Conecte-se)</span>
+                </a>
+            </div>
+
+            <!-- Footer text -->
+            <div class="text-center mt-8 text-gray-600 text-sm">
+                <p>Clique nos ícones para entrar em contato.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
